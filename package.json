@@ -1,10 +1,10 @@
 {
-  "name": "ng4-asp-api-crud",
+  "name": "ng4-api-crud",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng node server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -52,7 +52,7 @@
     "typescript": "~2.5.3"
   },
   "engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
+    "node": "8.9.4",
+    "npm": "5.6.0"
   }
 }
