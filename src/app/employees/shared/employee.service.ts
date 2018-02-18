@@ -19,11 +19,11 @@ export class EmployeeService {
     var headerOptions = new Headers({'Content-Type': 'application/json'});
     var requestOptions = new RequestOptions({method: RequestMethod.Post, headers: headerOptions});
     
-    return this.http.post('http://localhost:8000/api/employee', body, requestOptions).map(x => x.json());
+    return this.http.post('https://laravel-labtest.herokuapp.com/api/employee', body, requestOptions).map(x => x.json());
   }
 
   getEmployeeList() {
-    this.http.get('http://localhost:8000/api/employee')
+    this.http.get('https://laravel-labtest.herokuapp.com/api/employee')
     .map((data: Response) => {
       return data.json() as Employee[];
     }).toPromise().then(x => {
@@ -32,7 +32,7 @@ export class EmployeeService {
   } 
 
   deleteEmployee(id : number) {
-    return this.http.delete('http://localhost:8000/api/employee/' + id)
+    return this.http.delete('https://laravel-labtest.herokuapp.com/api/employee/' + id)
     .map(res => res.json());
   }
 }
